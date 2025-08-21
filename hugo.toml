@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://docs.bashfulrobot.com/'
 languageCode = 'en-us'
 title = 'Bashfulrobot MFG'
 theme = 'hugo-geekdoc'
