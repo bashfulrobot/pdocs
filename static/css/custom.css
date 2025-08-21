@@ -25,8 +25,8 @@ img[src*="logo"],
 
 /* Header bar styling with extracted colors */
 .gdoc-header {
-    background: linear-gradient(135deg, var(--gunmetal), var(--eerie-black)) !important;
-    border-bottom: 2px solid var(--rich-black);
+    background: var(--rich-black) !important;
+    border-bottom: 2px solid var(--eerie-black);
 }
 
 .gdoc-brand {
@@ -117,8 +117,8 @@ img[src*="logo"],
 
 /* Dark mode header styling */
 [data-dark-mode] .gdoc-header {
-    background: linear-gradient(135deg, var(--dark-cyan), var(--dark-cyan-2)) !important;
-    border-bottom: 2px solid var(--gunmetal);
+    background: var(--rich-black) !important;
+    border-bottom: 2px solid var(--eerie-black);
 }
 
 [data-dark-mode] .gdoc-page__nav a:hover,
@@ -134,9 +134,82 @@ img[src*="logo"],
     border-left: 4px solid var(--dark-cyan-2);
 }
 
-/* Hide "Built with Hugo" footer text */
+/* Remove dashed underline on navigation links (active and hover) */
+.gdoc-nav__entry.is-active,
+.gdoc-nav__entry:hover {
+    text-decoration: none !important;
+    border-bottom: none !important;
+}
+
+.gdoc-nav__entry.is-active:after,
+.gdoc-nav__entry:hover:after {
+    display: none !important;
+}
+
+/* Additional hover state cleanup */
+.gdoc-nav__entry:hover {
+    text-decoration-line: none !important;
+}
+
+/* Hide all footer branding text */
 .gdoc-footer__link,
 .gdoc-footer a[href*="gohugo"],
-.gdoc-footer a[href*="hugo"] {
+.gdoc-footer a[href*="hugo"],
+.gdoc-footer__item,
+.gdoc-footer p,
+.gdoc-footer span {
     display: none !important;
+}
+
+/* Hide entire footer if only branding remains */
+.gdoc-footer:empty,
+.gdoc-footer:has(:only-child) {
+    display: none !important;
+}
+
+/* Style regular content links to match theme */
+.gdoc-markdown a,
+.gdoc-page__content a,
+.gdoc-page a:not(.gdoc-nav__entry):not(.gdoc-button) {
+    color: var(--dark-cyan-2) !important;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.gdoc-markdown a:hover,
+.gdoc-page__content a:hover,
+.gdoc-page a:not(.gdoc-nav__entry):not(.gdoc-button):hover {
+    color: var(--dark-cyan) !important;
+    text-decoration: none;
+}
+
+/* Dark mode content links */
+[data-dark-mode] .gdoc-markdown a,
+[data-dark-mode] .gdoc-page__content a,
+[data-dark-mode] .gdoc-page a:not(.gdoc-nav__entry):not(.gdoc-button) {
+    color: var(--dark-cyan) !important;
+}
+
+[data-dark-mode] .gdoc-markdown a:hover,
+[data-dark-mode] .gdoc-page__content a:hover,
+[data-dark-mode] .gdoc-page a:not(.gdoc-nav__entry):not(.gdoc-button):hover {
+    color: var(--dark-cyan-2) !important;
+}
+
+/* Dark mode body background complement */
+[data-dark-mode] body,
+[data-dark-mode] .gdoc-page,
+[data-dark-mode] .gdoc-main {
+    background-color: var(--gunmetal) !important;
+}
+
+[data-dark-mode] .gdoc-nav,
+[data-dark-mode] .gdoc-nav__list {
+    background-color: var(--eerie-black) !important;
+}
+
+[data-dark-mode] .gdoc-page__content,
+[data-dark-mode] .gdoc-markdown {
+    background-color: var(--gunmetal) !important;
+    color: #e2e8ea !important;
 }
