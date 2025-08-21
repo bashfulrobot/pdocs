@@ -1,18 +1,32 @@
-/* Custom logo styling */
-.gdoc-brand__logo {
-    width: 60px !important;
-    height: 60px !important;
-    border-radius: 50%;
-    border: 3px solid #333;
-    object-fit: cover;
-    object-position: center center;
-    display: block !important;
+/* Color palette from logo */
+:root {
+    --rich-black: #101519;
+    --dark-cyan: #108681;
+    --eerie-black: #161B1D;
+    --gunmetal: #203636;
+    --dark-cyan-2: #1C8C86;
 }
 
-/* Header bar styling with complementary colors */
+/* Logo styling - targeting all possible logo elements */
+.gdoc-brand__logo,
+.gdoc-brand img,
+.gdoc-header img,
+img[src*="logo"],
+.gdoc-brand a img {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    border: 3px solid var(--rich-black) !important;
+    object-fit: cover !important;
+    object-position: center center !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+/* Header bar styling with extracted colors */
 .gdoc-header {
-    background: linear-gradient(135deg, var(--color-accent-600), var(--color-accent-700)) !important;
-    border-bottom: 2px solid var(--color-accent-800);
+    background: linear-gradient(135deg, var(--dark-cyan), var(--dark-cyan-2)) !important;
+    border-bottom: 2px solid var(--gunmetal);
 }
 
 .gdoc-brand {
@@ -45,102 +59,77 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Dark mode logo border */
-[data-dark-mode] .gdoc-brand__logo {
-    border-color: #fff;
-}
-
-/* Custom color scheme inspired by the logo */
-:root {
-    /* Primary colors from the logo - orange/amber tones */
-    --color-primary-100: #fef3c7;
-    --color-primary-200: #fde68a; 
-    --color-primary-300: #fcd34d;
-    --color-primary-400: #fbbf24;
-    --color-primary-500: #f59e0b;
-    --color-primary-600: #d97706;
-    --color-primary-700: #b45309;
-    --color-primary-800: #92400e;
-    --color-primary-900: #78350f;
-    
-    /* Accent colors - complementary teal for contrast */
-    --color-accent-100: #ccfbf1;
-    --color-accent-200: #99f6e4;
-    --color-accent-300: #5eead4;
-    --color-accent-400: #2dd4bf;
-    --color-accent-500: #14b8a6;
-    --color-accent-600: #0d9488;
-    --color-accent-700: #0f766e;
-    --color-accent-800: #115e59;
-    --color-accent-900: #134e4a;
-}
-
-/* Apply primary colors to links and interactive elements */
+/* Custom color scheme using logo palette */
 .gdoc-page__nav a:hover,
 .gdoc-nav__entry:hover,
 .gdoc-search__entry:hover {
-    background-color: var(--color-primary-100);
-    color: var(--color-primary-800);
+    background-color: rgba(16, 134, 129, 0.1);
+    color: var(--dark-cyan-2);
 }
 
 /* Active navigation items */
 .gdoc-nav__entry.is-active {
-    background-color: var(--color-primary-200);
-    color: var(--color-primary-900);
-    border-left: 4px solid var(--color-primary-600);
+    background-color: rgba(16, 134, 129, 0.15);
+    color: var(--dark-cyan-2);
+    border-left: 4px solid var(--dark-cyan);
 }
 
 /* Search highlighting */
 .gdoc-search mark {
-    background-color: var(--color-primary-300);
-    color: var(--color-primary-900);
+    background-color: rgba(16, 134, 129, 0.3);
+    color: var(--rich-black);
 }
 
 /* Button styling */
 .gdoc-button {
-    background-color: var(--color-primary-600);
-    border-color: var(--color-primary-600);
+    background-color: var(--dark-cyan);
+    border-color: var(--dark-cyan);
     color: white;
 }
 
 .gdoc-button:hover {
-    background-color: var(--color-primary-700);
-    border-color: var(--color-primary-700);
+    background-color: var(--dark-cyan-2);
+    border-color: var(--dark-cyan-2);
 }
 
 /* Code block improvements */
 .gdoc-code {
-    border-left: 4px solid var(--color-accent-500);
+    border-left: 4px solid var(--dark-cyan);
 }
 
 /* Dark mode adjustments */
 [data-dark-mode] {
-    --color-primary-100: #78350f;
-    --color-primary-200: #92400e;
-    --color-primary-300: #b45309;
-    --color-primary-400: #d97706;
-    --color-primary-500: #f59e0b;
-    --color-primary-600: #fbbf24;
-    --color-primary-700: #fcd34d;
-    --color-primary-800: #fde68a;
-    --color-primary-900: #fef3c7;
+    --rich-black: #f0f4f8;
+    --dark-cyan: #4dd0d0;
+    --eerie-black: #e2e8ea;
+    --gunmetal: #b8cccc;
+    --dark-cyan-2: #66e6e6;
+}
+
+/* Dark mode logo border */
+[data-dark-mode] .gdoc-brand__logo,
+[data-dark-mode] .gdoc-brand img,
+[data-dark-mode] .gdoc-header img,
+[data-dark-mode] img[src*="logo"],
+[data-dark-mode] .gdoc-brand a img {
+    border-color: var(--eerie-black) !important;
 }
 
 /* Dark mode header styling */
 [data-dark-mode] .gdoc-header {
-    background: linear-gradient(135deg, var(--color-accent-700), var(--color-accent-800)) !important;
-    border-bottom: 2px solid var(--color-accent-900);
+    background: linear-gradient(135deg, var(--gunmetal), var(--eerie-black)) !important;
+    border-bottom: 2px solid var(--rich-black);
 }
 
 [data-dark-mode] .gdoc-page__nav a:hover,
 [data-dark-mode] .gdoc-nav__entry:hover,
 [data-dark-mode] .gdoc-search__entry:hover {
-    background-color: var(--color-primary-200);
-    color: var(--color-primary-800);
+    background-color: rgba(77, 208, 208, 0.1);
+    color: var(--dark-cyan);
 }
 
 [data-dark-mode] .gdoc-nav__entry.is-active {
-    background-color: var(--color-primary-300);
-    color: var(--color-primary-900);
-    border-left: 4px solid var(--color-primary-500);
+    background-color: rgba(77, 208, 208, 0.15);
+    color: var(--dark-cyan);
+    border-left: 4px solid var(--dark-cyan-2);
 }
