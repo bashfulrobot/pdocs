@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'Documentation'
+title = 'Bashfulrobot MFG'
 theme = 'hugo-geekdoc'
 
 [markup]
@@ -20,8 +20,8 @@ theme = 'hugo-geekdoc'
   geekdocDarkModeDim = true
   geekdocAnchor = true
   geekdocAnchorCopy = true
-  geekdocMenuBundle = true
   geekdocCollapseSection = true
   geekdocImageLazyLoading = true
   geekdocToC = 3
-  geekdocLogo = '/images/logo-original.png'
+  geekdocLogo = '/images/brmfg-logo-circle-200.png'
+
