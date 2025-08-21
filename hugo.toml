@@ -24,3 +24,4 @@ theme = 'hugo-geekdoc'
   geekdocCollapseSection = true
   geekdocImageLazyLoading = true
   geekdocToC = 3
+  geekdocLogo = '/images/logo-original.png'
