@@ -1,11 +1,48 @@
 /* Custom logo styling */
 .gdoc-brand__logo {
-    width: 50px !important;
-    height: 50px !important;
+    width: 60px !important;
+    height: 60px !important;
     border-radius: 50%;
     border: 3px solid #333;
     object-fit: cover;
-    object-position: center top;
+    object-position: center center;
+    display: block !important;
+}
+
+/* Header bar styling with complementary colors */
+.gdoc-header {
+    background: linear-gradient(135deg, var(--color-accent-600), var(--color-accent-700)) !important;
+    border-bottom: 2px solid var(--color-accent-800);
+}
+
+.gdoc-brand {
+    color: white !important;
+}
+
+.gdoc-brand__title {
+    color: white !important;
+    font-weight: 600;
+}
+
+/* Header navigation items */
+.gdoc-header .gdoc-nav__entry {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.gdoc-header .gdoc-nav__entry:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+}
+
+/* Search in header */
+.gdoc-search input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.gdoc-search input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Dark mode logo border */
@@ -87,6 +124,12 @@
     --color-primary-700: #fcd34d;
     --color-primary-800: #fde68a;
     --color-primary-900: #fef3c7;
+}
+
+/* Dark mode header styling */
+[data-dark-mode] .gdoc-header {
+    background: linear-gradient(135deg, var(--color-accent-700), var(--color-accent-800)) !important;
+    border-bottom: 2px solid var(--color-accent-900);
 }
 
 [data-dark-mode] .gdoc-page__nav a:hover,
