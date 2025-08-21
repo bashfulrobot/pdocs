@@ -12,5 +12,15 @@ theme = 'hugo-geekdoc'
 
 [params]
   geekdocRepo = 'https://github.com/bashfulrobot/pdocs'
+  geekdocEditPage = true
   geekdocSearch = true
+  geekdocSearchShowParent = true
   geekdocDarkMode = true
+  geekdocDarkModeCode = true
+  geekdocDarkModeDim = true
+  geekdocAnchor = true
+  geekdocAnchorCopy = true
+  geekdocMenuBundle = true
+  geekdocCollapseSection = true
+  geekdocImageLazyLoading = true
+  geekdocToC = 3
