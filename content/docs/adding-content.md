@@ -133,7 +133,7 @@ The site supports standard markdown plus Geekdoc extensions:
 - Bulleted list
 1. Numbered list
 
-[Link text](https://example.com)
+[Markdown Guide](https://www.markdownguide.org)
 
 ```bash
 # Code blocks with syntax highlighting
