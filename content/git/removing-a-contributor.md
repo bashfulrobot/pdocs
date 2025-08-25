@@ -5,8 +5,6 @@ geekdocAnchor: true
 geekdocToC: 3
 ---
 
-# Removing a Contributor from a GitHub Repository
-
 This guide outlines the complete process for removing a contributor from a GitHub repository, including rewriting Git history to remove their commits and forcing cache updates on GitHub to reflect the changes.
 
 ## Overview
