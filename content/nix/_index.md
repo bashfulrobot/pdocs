@@ -1,6 +1,5 @@
 ---
 title: "Nix"
-weight: 20
 ---
 
 # Nix Documentation

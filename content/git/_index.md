@@ -1,6 +1,5 @@
 ---
 title: "Git"
-weight: 30
 ---
 
 Documentation for Git version control, repository management, and collaboration workflows.
