@@ -55,9 +55,9 @@ git push --force
 
 ### 3. Force GitHub Cache Update
 
-Even after rewriting history and force-pushing changes, the old contributor may still appear on GitHub due to caching. Use these methods to force a cache update:
+Even after rewriting history and force-pushing changes, the old contributor may still appear on GitHub due to caching. Use the branch rename strategy to force a cache update:
 
-#### Method A: Branch Rename Strategy
+#### Branch Rename Strategy
 
 Renaming the default branch can trigger cache invalidation on GitHub:
 
@@ -100,19 +100,6 @@ Renaming the default branch can trigger cache invalidation on GitHub:
    ```bash
    git push origin --delete main-temp
    ```
-
-#### Method B: Empty Commit
-
-If branch renaming doesn't trigger the cache update, try pushing an empty commit:
-
-```bash
-git commit --allow-empty -m "chore: trigger github cache update"
-git push
-```
-
-### 4. Contact GitHub Support
-
-If automated methods fail and the contributor still appears after trying all previous steps, contact GitHub Support for manual cache refresh.
 
 ## Troubleshooting
 
